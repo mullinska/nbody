@@ -16,16 +16,6 @@ class Planet
 
   attr_reader :x, :y, :velocityx, :velocityy, :mass, :image, :forcex, :forcey
 
-  def newvelocity(plusx, plusy)
-    @velocityx += plusx
-    @velocityy += plusy
-  end
-
-  def newposition(plusx, plusy)
-    @x += plusx
-    @y += plusy
-  end
-
   def draw
     @image.draw((@x/@universesize)*320 + (640/2) - @image.width/2, (@y/@universesize)*320 + (640/2) - @image.height/2, 1)
   end
